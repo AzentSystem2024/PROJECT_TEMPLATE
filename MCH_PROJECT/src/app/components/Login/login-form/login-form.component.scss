@@ -1,0 +1,131 @@
+.login-page {
+    width: 100vw;
+    height: 100vh;
+    background-color:var(--base-bg);
+    position: relative;
+  }
+  
+
+
+  
+  .login-box {
+    width: 400px;
+    height: 500px;
+    padding: 30px;
+    justify-content: flex-end;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid #e0e0e0;
+    background-color: var(--base-bg);
+    color: #000;
+  
+    position: absolute;
+    top: 50%;
+    right: 50px; /* Adjust this to control the distance from the right edge */
+    transform: translateY(-50%);
+    // Override DevExtreme Dark Theme Styles
+    ::ng-deep .dx-texteditor {
+      background-color: #fff !important;
+      color: #000 !important;
+      border-color: #d9d9d9 !important;
+    }
+
+    ::ng-deep .form-text {
+      color: var(--base-text-color-alpha);
+    }
+  
+    ::ng-deep .dx-texteditor-input {
+      color: #000 !important;
+    }
+  
+    ::ng-deep .dx-state-focused .dx-texteditor-input {
+      border-color: #40a9ff !important;
+      box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2) !important;
+    }
+  
+    ::ng-deep .dx-button.dx-state-hover,
+    ::ng-deep .dx-button.dx-state-active,
+    ::ng-deep .dx-button.dx-state-focused {
+      background-color: #1890ff !important;
+      color: #fff !important;
+    }
+  
+    ::ng-deep .dx-button {
+      background-color: #1890ff !important;
+      color: #fff !important;
+      border: none !important;
+    }
+
+    .login-title {
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: var(--texteditor-label-color)
+      }
+
+      .reset-link {
+        text-align: center;
+        font-size: 12px;
+        font-style: normal;
+        margin: 6px 0 50px 0;
+      
+        a {
+          cursor: pointer;
+        }
+    }
+      
+  }
+  .password-toggle-button .dx-icon {
+    color: #555; /* Change icon color */
+    font-size: 16px; /* Adjust icon size */
+  }
+  
+  .password-toggle-button .dx-icon:hover {
+    color: #007bff; /* Highlight on hover */
+  }
+
+  ::ng-deep .dx-invalid-message {
+    color: red !important;  /* Change text color to red */
+    // background-color: #ffcccc !important; /* Light red background */
+    // border: 1px solid red !important; /* Red border */
+    // font-weight: bold;
+    padding: 5px;
+    border-radius: 4px;
+  }
+
+
+
+
+  @media (max-width: 480px) {
+  .login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ensures full height */
+    padding: 0 10px; /* Adds padding to prevent cutoff */
+  }
+
+  .login-box {
+    width: 100% !important; /* Ensure it takes the full width */
+    max-width: 350px; /* Restrict max width to keep it centered */
+    padding: 20px;
+    background: #fff; /* Keep background intact */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+
+  .dx-form {
+    width: 100%;
+  }
+
+  .dx-textbox,
+  .dx-button {
+    width: 100% !important;
+  }
+
+  .reset-link {
+    text-align: center;
+    margin-top: 10px;
+  }
+}
